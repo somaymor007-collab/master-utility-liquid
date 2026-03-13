@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
 :root {
-    --bg-dark: #08080c;
-    --accent-purple: #7c4dff;
-    --accent-glow: rgba(124, 77, 255, 0.4);
+    --bg-dark: #000000;
+    --accent-purple: #8b5cf6;
+    --accent-glow: rgba(139, 92, 246, 0.35);
     --text-primary: #ffffff;
-    --text-secondary: rgba(255, 255, 255, 0.6);
-    --glass-bg: rgba(255, 255, 255, 0.02);
-    --glass-border: rgba(255, 255, 255, 0.08);
-    --btn-glow: rgba(255, 255, 255, 0.15);
+    --text-secondary: rgba(255, 255, 255, 0.7);
+    --glass-bg: rgba(20, 10, 40, 0.4);
+    --glass-border: rgba(139, 92, 246, 0.2);
+    --btn-glow: rgba(139, 92, 246, 0.3);
 }
 
 * {
@@ -26,6 +26,11 @@ body {
     overflow-x: hidden;
 }
 
+.text-glow {
+    color: var(--text-primary);
+    text-shadow: 0 0 20px var(--accent-glow);
+}
+
 /* Background System */
 .page-bg {
     position: fixed;
@@ -34,15 +39,15 @@ body {
     width: 100%;
     height: 100%;
     z-index: -1;
-    background: radial-gradient(circle at 50% 120%, var(--accent-glow), transparent 60%);
+    background: radial-gradient(circle at 50% 50%, var(--accent-glow), transparent 70%);
 }
 
 .grid-overlay {
     position: absolute;
     inset: 0;
-    background-image: radial-gradient(var(--glass-border) 1px, transparent 1px);
-    background-size: 40px 40px;
-    opacity: 0.3;
+    background-image: radial-gradient(rgba(139, 92, 246, 0.1) 1px, transparent 1px);
+    background-size: 60px 60px;
+    opacity: 0.5;
 }
 
 .liquid-asset {
@@ -78,16 +83,16 @@ body {
 /* Premium Pill Button Style (from screenshot) */
 .btn-premium {
     position: relative;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.03);
     backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 1rem 2.5rem;
+    padding: 0.8rem 2.2rem;
     border-radius: 100px;
-    font-weight: 600;
-    font-size: 0.95rem;
+    font-weight: 500;
+    font-size: 0.9rem;
     cursor: pointer;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -155,7 +160,7 @@ body {
 }
 
 .portal-glass {
-    background: rgba(255, 255, 255, 0.03);
+    background: var(--glass-bg);
     backdrop-filter: blur(50px);
     border: 1px solid var(--glass-border);
     border-radius: 100px;
@@ -163,7 +168,7 @@ body {
     display: flex;
     align-items: center;
     gap: 1.5rem;
-    box-shadow: 0 40px 100px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 40px 100px rgba(139, 92, 246, 0.1);
     transition: all 0.4s ease;
 }
 
@@ -277,7 +282,7 @@ body {
 }
 
 .info-card {
-    background: rgba(255, 255, 255, 0.02);
+    background: rgba(139, 92, 246, 0.03);
     backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
     border-radius: 32px;
@@ -286,10 +291,10 @@ body {
 }
 
 .info-card:hover {
-    background: rgba(255, 255, 255, 0.04);
-    border-color: rgba(255, 255, 255, 0.2);
+    background: rgba(139, 92, 246, 0.08);
+    border-color: var(--accent-purple);
     transform: translateY(-10px);
-    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 30px 60px rgba(139, 92, 246, 0.15);
 }
 
 .card-icon {
