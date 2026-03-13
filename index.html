@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LIQUID | The High-Fidelity Utility Hub</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+    <div class="page-bg">
+        <div class="grid-overlay"></div>
+        <img src="assets/liquid_bg.png" class="liquid-asset" id="bgBlob">
+    </div>
+
+    <nav class="navbar entrance" style="animation-delay: 0.1s;">
+        <div class="nav-brand">Liquid Resources</div>
+        <div class="nav-actions">
+            <a href="#" class="btn-premium" style="padding: 0.8rem 2rem; font-size: 0.85rem;">Login</a>
+            <a href="#" class="btn-premium" style="background: white; color: black; padding: 0.8rem 2.2rem; font-size: 0.85rem;">Get Access</a>
+        </div>
+    </nav>
+
+    <main class="hero">
+        <h1 class="entrance" style="animation-delay: 0.2s;">Elevate Your<br>Media Interface</h1>
+        <p class="entrance" style="animation-delay: 0.3s;">High-fidelity extraction and processing. Seamless, secure, and gorgeous by design.</p>
+
+        <div class="portal-container entrance" style="animation-delay: 0.4s;">
+            <div class="portal-glass">
+                <input type="text" class="extract-input" placeholder="Paste media URL here..." id="mediaInput">
+                <button class="btn-extract" id="actionBtn">Extract Media</button>
+            </div>
+        </div>
+
+        <!-- Floating Stat Cards -->
+        <div class="floating-stat stat-left entrance" style="animation-delay: 0.6s;">
+            <span class="stat-label">System Performance</span>
+            <div class="stat-value">99.9% Uptime</div>
+            <p style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 0.5rem;">Distributed Node Extraction</p>
+        </div>
+
+        <div class="floating-stat stat-right entrance" style="animation-delay: 0.7s;">
+            <span class="stat-label">Active Connections</span>
+            <div class="stat-value" id="loadVal">1,280</div>
+            <div class="progress-track" style="margin-top: 1rem;">
+                <div class="progress-fill" id="loadBar" style="width: 85%;"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
